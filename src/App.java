@@ -71,38 +71,6 @@ public class App {
         Conta newConta = new Conta(pais, 0, 0, newCliente);
         contas.add(newConta);
     }
-
-    private static void entrarContaCorrente(){
-        System.out.println("Digite seu CPF: ");
-        String cpf = input.next();
-
-        Cliente cliente = null;
-        Conta conta = null; 
-
-        for (Cliente c : clientes) {
-            if(c.getCpf().equals(cpf)){
-                cliente = c;
-                break;
-            }
-        }
-
-        if (cliente == null){
-            System.out.println("Cliente não encontrado!");
-            return;
-        }
-
-        for (Conta c : contas) {
-            if (c.getCliente().equals(cliente)){
-                conta = c;
-                break;
-            }
-        }
-
-        if (conta == null){
-            System.out.println("Conta não encontrada!");
-        }
-
-    }  
     
 }
 
